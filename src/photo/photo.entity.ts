@@ -1,9 +1,11 @@
+import { User } from 'src/user/user.entity';
 import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
 } from 'typeorm';
 
 @Entity()
@@ -26,9 +28,7 @@ export class Photo {
   @Column()
   isPublished: boolean;
 
-  @CreateDateColumn()
-  created_at: Date;
+  @ManyToOne(() => User, (user) => user.posts, { onDelete: 'CASCADE' })
+  user: User;
 
-  @UpdateDateColumn()
-  update_at: Date;
 }

@@ -1,7 +1,7 @@
 export class CreatePhotoDto {
-  name: string;
-  description: string;
-  filename: string;
-  views: number;
-  isPublished: boolean;
+    name: string;
+    description: string;
+    filename: string;
+    views: number;
+    isPublished: boolean;
 }

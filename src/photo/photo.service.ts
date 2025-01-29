@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { Repository } from 'typeorm';
-import { Photo } from './entities/photo.entity';
+import { Photo } from './photo.entity';
 import { PHOTO_REPOSITORY } from 'src/common/constants';
 import { CreatePhotoDto } from './dto';
 
@@ -12,11 +12,7 @@ export class PhotoService {
   ) {}
 
   async addPhoto(createPhotoDto: CreatePhotoDto): Promise<Photo> {
-    console.log('BEFORE: \n', createPhotoDto);
-
     const photo = this.photoRepository.create(createPhotoDto);
-
-    console.log('AFTER: \n', photo);
 
     return this.photoRepository.save(photo);
   }

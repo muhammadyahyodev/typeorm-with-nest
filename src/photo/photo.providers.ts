@@ -1,6 +1,6 @@
 import { DataSource } from 'typeorm';
-import { Photo } from './photo.entity';
 import { DATA_SOURCE, PHOTO_REPOSITORY } from 'src/common/constants';
+import { Photo } from './photo.entity';
 
 export const photoProviders = [
   {
