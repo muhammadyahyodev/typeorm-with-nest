@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { Photo } from './photo.entity';
-import { PHOTO_REPOSITORY } from 'src/common/constants';
+import { PHOTO_REPOSITORY } from '../common/constants';
 import { CreatePhotoDto } from './dto';
 
 @Injectable()

@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { Repository } from 'typeorm';
 import { User } from './user.entity';
-import { USER_REPOSITORY } from 'src/common/constants';
+import { USER_REPOSITORY } from '../common/constants';
 import { AddUserDto } from './dto/add-user.dto';
 import { DeleteUserDto } from './dto/delete-user.dto';
 
@@ -13,9 +13,7 @@ export class UserService {
   ) {}
 
   async addUser(addUser: AddUserDto): Promise<User> {
-
-    console.log(addUser)
-
+    console.log(addUser);
 
     const photo = this.userRepository.create(addUser);
 
